@@ -4,7 +4,9 @@ definePageMeta({
 });
 </script>
 <template>
-  <section class="px-6 max-w-[1400px] mx-auto my-10 flex flex-col">
+  <section
+    class="px-6 max-w-[1400px] mx-auto my-10 flex flex-col min-h-[80vh] justify-center"
+  >
     <NuxtLink
       to="/create"
       class="border-2 border-black rounded-md py-1 px-6 mb-4 mx-auto transition-colors duration-300 hover:bg-black hover:text-white"
