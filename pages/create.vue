@@ -1,5 +1,6 @@
 <script setup>
 import posts from "/utilities/posts.js";
+const allPosts = posts.allPosts;
 const post = reactive({
   title: "",
   subtitle: "",
@@ -8,7 +9,7 @@ const post = reactive({
 });
 
 function createThePost() {
-  posts.push(post);
+  allPosts.push(post);
   navigateTo("/posts");
 }
 </script>
@@ -47,7 +48,7 @@ function createThePost() {
     <button
       @click="createThePost()"
       type="submit"
-      class="bg-black text-white border-1 border-black px-6 py-1 rounded-md mt-3 hover:(bg-green-500 border-green-500) transition-colors duration-300"
+      class="bg-black text-white border-1 border-black px-6 py-1 rounded-md mt-3 hover:bg-green-500 hover:border-green-500 transition-colors duration-300"
     >
       Create
     </button>

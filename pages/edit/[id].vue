@@ -1,6 +1,7 @@
 <script setup>
 import posts from "/utilities/posts.js";
-const post = posts[useRoute().params.id];
+const allPosts = posts.allPosts;
+const post = allPosts[useRoute().params.id];
 const postID = useRoute().params.id;
 const editedPost = reactive({
   title: "",
@@ -10,7 +11,8 @@ const editedPost = reactive({
 });
 
 function update() {
-  posts[useRoute().params.id] = editedPost;
+  allPosts[useRoute().params.id] = editedPost;
+  posts.messageToShow = "Post Updated Successfully";
   navigateTo(`/posts/${postID}`);
 }
 </script>
