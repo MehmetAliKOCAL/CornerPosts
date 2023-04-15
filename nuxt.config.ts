@@ -9,5 +9,8 @@ export default defineNuxtConfig({
       app: {
         pageTransition: { name: 'slide', mode: 'out-in' },
         layoutTransition: { name: 'layout', mode: 'out-in' },
+        head:{
+          title:'Corner Posts'
+        }
       },
 })

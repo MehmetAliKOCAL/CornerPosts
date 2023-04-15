@@ -18,7 +18,9 @@ if (posts.messageToShow != "") {
 }
 </script>
 <template>
-  <section class="my-10 max-w-[1400px] px-6 mx-auto">
+  <section
+    class="my-10 max-w-[1400px] px-6 mx-auto min-h-[35vh] flex flex-col justify-center items-center"
+  >
     <h1 class="font-bold text-3xl text-center">{{ post.title }}</h1>
     <p class="text-lg text-gray-400 text-center mb-5">{{ post.subtitle }}</p>
     <p class="text-lg">{{ post.content }}</p>

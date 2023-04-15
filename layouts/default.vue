@@ -4,5 +4,6 @@
     <Banner />
     <slot />
     <Footer />
+    <BottomInfoBar />
   </div>
 </template>

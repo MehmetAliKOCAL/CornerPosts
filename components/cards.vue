@@ -13,7 +13,7 @@ function deletePost() {
   <NuxtLink
     :to="props.admin != true ? `/posts/${allPosts.indexOf(post)}` : ''"
     v-for="post in allPosts"
-    class="border-2 border-black rounded-md w-[250px] max-w-[250px] p-5"
+    class="border-2 border-black rounded-md w-[250px] max-w-[250px] max-[825px]:max-w-full max-[825px]:w-full p-5"
   >
     <h1 class="font-bold text-lg w-full max-w-[250px] line-clamp-2">
       {{ post.title }}

@@ -9,14 +9,8 @@
         mollitia, deserunt repudiandae? Sapiente unde possimus eos ipsam
         expedita aliquid officiis, atque quia nobis facilis aliquam sint commodi
         vel voluptatem, error quis ullam voluptate libero natus quam fugiat? Rem
-        in aut enim porro. Optio ea accusamus eaque ut laborum. Reiciendis atque
-        vitae delectus magni repellendus libero ex, sint, quaerat ut tempora
-        omnis molestiae voluptatum aperiam tempore in a culpa velit id ipsum
-        dolorem. Id quo error natus aut velit ullam facilis impedit, rerum quis
-        labore praesentium ipsa quam suscipit, nulla cumque culpa dolorum
-        placeat. Suscipit quia fugit ea, aliquid facilis ut consectetur id.
       </p>
-      <p class="text-yellow-500">~ Someone Famous</p>
+      <p class="text-yellow-500 mt-2">~ Someone Famous</p>
     </div>
   </footer>
 </template>
