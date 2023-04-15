@@ -1,4 +1,5 @@
 <script setup>
+import Swal from "sweetalert2";
 import posts from "/utilities/posts.js";
 const allPosts = posts.allPosts;
 const post = reactive({
@@ -10,6 +11,7 @@ const post = reactive({
 
 function createThePost() {
   allPosts.push(post);
+  posts.messageToShow = "Post Created Successfully";
   navigateTo("/posts");
 }
 </script>
