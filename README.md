@@ -1,42 +1,51 @@
-# Nuxt 3 Minimal Starter
+### [Live Preview](https://cornerposts.netlify.app)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A corner post website demo made with Nuxt 3 & TailwindCSS. For further instructions about Nuxt, view [docs](https://nuxt.com/docs/getting-started/introduction).
 
-## Setup
+# Setup
 
-Make sure to install the dependencies:
+### 1. Clone the repository:
 
 ```bash
-# yarn
+git clone https://github.com/MehmetAliKOCAL/CornerPosts
+```
+
+### 2. Install the dependencies:
+
+```bash
+# Open the folder 
+cd CornerPosts
+
+# Install with yarn
 yarn install
 
-# npm
+# Install with npm
 npm install
 
-# pnpm
+# Install with pnpm
 pnpm install
 ```
 
-## Development Server
+# Run the Development Server
 
-Start the development server on `http://localhost:3000`
+### Start the server on http://localhost:3000
 
 ```bash
 npm run dev
 ```
 
-## Production
+# Production
 
-Build the application for production:
+### Build the application for production:
 
 ```bash
 npm run build
 ```
 
-Locally preview production build:
+### Locally preview production build:
 
 ```bash
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check out the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
