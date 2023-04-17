@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <main>
     <Header />
     <slot />
     <BottomInfoBar />
-  </div>
+  </main>
 </template>

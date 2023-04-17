@@ -10,14 +10,14 @@ const post = reactive({
 });
 
 function createThePost() {
-  allPosts.push(post);
+  allPosts.unshift(post);
   posts.messageToShow = "Post Created Successfully";
   navigateTo("/posts");
 }
 </script>
 <template>
-  <div class="flex flex-col max-w-[400px] mx-auto py-10">
-    <h1 class="text-2xl font-semibold">Create a New Corner Post</h1>
+  <div class="flex flex-col max-w-[400px] mx-auto py-20 px-6">
+    <legend class="text-2xl font-semibold">Create a New Corner Post</legend>
     <label class="mt-2 font-semibold" for="title">Post Title</label>
     <input
       v-model="post.title"
@@ -47,12 +47,21 @@ function createThePost() {
       type="text"
       rows="5"
     />
-    <button
-      @click="createThePost()"
-      type="submit"
-      class="bg-black text-white border-1 border-black px-6 py-1 rounded-md mt-3 hover:bg-green-500 hover:border-green-500 transition-colors duration-300"
-    >
-      Create
-    </button>
+    <div class="w-full flex gap-2">
+      <NuxtLink
+        to="/admin"
+        type="submit"
+        class="w-full text-center text-red-500 hover:text-white border-1 border-red-500 px-6 hover:bg-red-500 py-1 rounded-md mt-3 transition-colors duration-300"
+      >
+        Cancel
+      </NuxtLink>
+      <button
+        @click="createThePost()"
+        type="submit"
+        class="bg-black text-white border-1 border-black px-6 py-1 rounded-md mt-3 hover:bg-green-500 hover:border-green-500 transition-colors duration-300 w-full"
+      >
+        Create
+      </button>
+    </div>
   </div>
 </template>

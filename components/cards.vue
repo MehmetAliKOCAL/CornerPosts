@@ -3,8 +3,8 @@ import posts from "/utilities/posts.js";
 const allPosts = posts.allPosts;
 const props = defineProps(["admin"]);
 
-function deletePost() {
-  allPosts.splice(allPosts[useRoute().params.id], 1);
+function deletePost(post) {
+  allPosts.splice(allPosts.indexOf(post), 1);
   posts.messageToShow = "Post Deleted Successfully";
   navigateTo("/posts");
 }
@@ -42,7 +42,7 @@ function deletePost() {
         Edit
       </NuxtLink>
       <button
-        @click="deletePost()"
+        @click="deletePost(post)"
         class="text-red-500 border-2 border-red-500 font-bold rounded-md px-4 py-1 mt-4 hover:bg-red-500 hover:text-white transition-all duration-300"
       >
         Delete

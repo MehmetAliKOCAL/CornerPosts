@@ -53,11 +53,12 @@ function update() {
       rows="5"
     />
     <div class="mt-3 space-x-2">
-      <button
-        class="hover:bg-red-500 hover:text-white text-red-500 border-1 border-red-500 px-6 py-1 rounded-md transition-colors duration-300"
+      <NuxtLink
+        to="/posts"
+        class="hover:bg-red-500 hover:text-white text-red-500 border-1 border-red-500 px-6 py-1 rounded-md transition-colors duration-300 inline-block"
       >
         Cancel
-      </button>
+      </NuxtLink>
       <button
         @click="update()"
         type="submit"
