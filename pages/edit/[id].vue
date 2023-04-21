@@ -17,7 +17,7 @@ function update() {
 }
 </script>
 <template>
-  <div class="flex flex-col max-w-[400px] mx-auto py-10">
+  <div class="flex flex-col max-w-[400px] mx-auto py-10 px-6">
     <h1 class="text-2xl font-semibold">Edit the Corner Post</h1>
     <label class="mt-2 font-semibold" for="title">Post Title</label>
     <input
