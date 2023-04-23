@@ -13,6 +13,11 @@
     "nuxt": "^3.4.1"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.9",
+    "pinia": "^2.0.35",
     "sweetalert2": "^11.7.3"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
