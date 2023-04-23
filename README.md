@@ -1,4 +1,4 @@
-### [Live Preview](https://cornerposts.netlify.app)
+### [Live Preview](https://cornerposts.vercel.app/)
 
 A corner post website demo made with Nuxt 3, Firebase & TailwindCSS. You can edit the posts, delete them or create new ones. For further instructions about Nuxt, view [docs](https://nuxt.com/docs/getting-started/introduction).
 
