@@ -1,35 +1,26 @@
 <script setup>
-import Swal from "sweetalert2";
-import posts from "/utilities/posts.js";
-const allPosts = posts.allPosts;
+import { usePostsStore } from "/store/posts.js";
+const postsStore = usePostsStore();
 const post = reactive({
   title: "",
-  subtitle: "",
   summary: "",
   content: "",
 });
 
 function createThePost() {
-  allPosts.unshift(post);
-  posts.messageToShow = "Post Created Successfully";
-  navigateTo("/posts");
+  postsStore.createPost(post);
+  postsStore.messageToShow = "Post Created Successfully";
+  navigateTo("/");
 }
 </script>
 <template>
-  <div class="flex flex-col max-w-[400px] mx-auto py-20 px-6">
+  <section class="flex flex-col max-w-[400px] mx-auto py-20 px-6">
     <legend class="text-2xl font-semibold">Create a New Corner Post</legend>
     <label class="mt-2 font-semibold" for="title">Post Title</label>
     <input
       v-model="post.title"
       class="border-1 border-black rounded-md px-3 py-1 outline-none focus:border-sky-500 hover:border-sky-500 transition-colors duration-300"
       id="title"
-      type="text"
-    />
-    <label class="mt-2 font-semibold" for="subtitle">Post Subtitle</label>
-    <input
-      v-model="post.subtitle"
-      class="border-1 border-black rounded-md px-3 py-1 outline-none focus:border-sky-500 hover:border-sky-500 transition-colors duration-300"
-      id="subtitle"
       type="text"
     />
     <label class="mt-2 font-semibold" for="summary">Post Summary</label>
@@ -63,5 +54,5 @@ function createThePost() {
         Create
       </button>
     </div>
-  </div>
+  </section>
 </template>

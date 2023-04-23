@@ -1,9 +1,7 @@
 <script setup>
 import Swal from "sweetalert2";
-import posts from "/utilities/posts.js";
-definePageMeta({
-  layout: "posts",
-});
+import { usePostsStore } from "/store/posts.js";
+const posts = usePostsStore();
 
 if (posts.messageToShow != "") {
   Swal.fire({
@@ -18,6 +16,7 @@ if (posts.messageToShow != "") {
   posts.messageToShow = "";
 }
 </script>
+
 <template>
   <NuxtPage />
 </template>

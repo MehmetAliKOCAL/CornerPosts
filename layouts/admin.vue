@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header />
+    <Header class="shadow-md" />
     <slot />
     <BottomInfoBar />
   </main>
