@@ -3,7 +3,9 @@ import Swal from "sweetalert2";
 import { usePostsStore } from "/store/posts";
 const postsStore = usePostsStore();
 const postID = useRoute().params.id;
-let post = reactive(await postsStore.getPost(postID));
+
+await postsStore.getPost(postID);
+const post = await postsStore.getPost(postID);
 
 if (postsStore.messageToShow != "") {
   Swal.fire({
@@ -12,12 +14,13 @@ if (postsStore.messageToShow != "") {
     position: "bottom-end",
     showConfirmButton: false,
     timer: "2500",
-    background: "#1BA31F",
+    background: "#2A2A2A",
     color: "white",
   });
   postsStore.messageToShow = "";
 }
 </script>
+
 <template>
   <section
     class="my-10 max-w-[1400px] px-6 mx-auto min-h-[35vh] flex flex-col justify-center items-center"

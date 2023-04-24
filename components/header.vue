@@ -9,7 +9,7 @@
       <NuxtLink
         to="/admin"
         class="font-semibold hover:text-sky-500 transition-colors duration-300"
-        >Admin</NuxtLink
+        >Manage Posts</NuxtLink
       >
     </nav>
   </header>

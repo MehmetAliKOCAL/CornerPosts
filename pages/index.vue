@@ -2,6 +2,8 @@
 import Swal from "sweetalert2";
 import { usePostsStore } from "/store/posts.js";
 const postsStore = usePostsStore();
+
+await postsStore.getAllPosts();
 const allPosts = await postsStore.getAllPosts();
 
 function postCount() {
@@ -16,7 +18,7 @@ if (postsStore.messageToShow != "") {
     position: "bottom-end",
     showConfirmButton: false,
     timer: "2500",
-    background: "#1BA31F",
+    background: "#2A2A2A",
     color: "white",
   });
   postsStore.messageToShow = "";
