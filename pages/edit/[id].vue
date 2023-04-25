@@ -9,7 +9,23 @@ const editedPost = reactive({
   content: "",
 });
 
+watch(editedPost, () => {
+  localStorage.setItem(`editedPostDraft${postID}`, JSON.stringify(editedPost));
+});
+
+onBeforeMount(() => {
+  const editedPostDraft = JSON.parse(
+    localStorage.getItem(`editedPostDraft${postID}`)
+  );
+  if (editedPostDraft !== null) {
+    editedPost.title = editedPostDraft.title;
+    editedPost.summary = editedPostDraft.summary;
+    editedPost.content = editedPostDraft.content;
+  }
+});
+
 async function update() {
+  localStorage.removeItem(`editedPostDraft${postID}`);
   postsStore.updatePost(postID, editedPost);
   postsStore.messageToShow = "Post Updated Successfully";
   navigateTo(`/postDetails/${postID}`);

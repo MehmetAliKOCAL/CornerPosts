@@ -1,14 +1,28 @@
 <script setup>
 import { usePostsStore } from "/store/posts.js";
 const postsStore = usePostsStore();
-const post = reactive({
+const newPost = reactive({
   title: "",
   summary: "",
   content: "",
 });
 
+watch(newPost, () => {
+  localStorage.setItem("newPostDraft", JSON.stringify(newPost));
+});
+
+onBeforeMount(() => {
+  const newPostDraft = JSON.parse(localStorage.getItem("newPostDraft"));
+  if (newPostDraft !== null) {
+    newPost.title = newPostDraft.title;
+    newPost.summary = newPostDraft.summary;
+    newPost.content = newPostDraft.content;
+  }
+});
+
 function createThePost() {
-  postsStore.createPost(post);
+  localStorage.removeItem("newPostDraft");
+  postsStore.createPost(newPost);
   postsStore.messageToShow = "Post Created Successfully";
   navigateTo("/");
 }
@@ -18,21 +32,21 @@ function createThePost() {
     <legend class="text-2xl font-semibold">Create a New Corner Post</legend>
     <label class="mt-2 font-semibold" for="title">Post Title</label>
     <input
-      v-model="post.title"
+      v-model="newPost.title"
       class="border-1 border-black rounded-md px-3 py-1 outline-none focus:border-sky-500 hover:border-sky-500 transition-colors duration-300"
       id="title"
       type="text"
     />
     <label class="mt-2 font-semibold" for="summary">Post Summary</label>
     <input
-      v-model="post.summary"
+      v-model="newPost.summary"
       class="border-1 border-black rounded-md px-3 py-1 outline-none focus:border-sky-500 hover:border-sky-500 transition-colors duration-300"
       id="summary"
       type="text"
     />
     <label class="mt-2 font-semibold" for="content">Post Content</label>
     <textarea
-      v-model="post.content"
+      v-model="newPost.content"
       class="border-1 border-black rounded-md px-3 py-1 outline-none focus:border-sky-500 hover:border-sky-500 transition-colors duration-300"
       id="content"
       type="text"
