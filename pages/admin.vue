@@ -9,7 +9,7 @@ definePageMeta({
   >
     <NuxtLink
       to="/create"
-      class="border-2 border-black rounded-md py-1 px-6 mb-4 mx-auto transition-colors duration-300 hover:bg-black hover:text-white"
+      class="border-1 border-black/40 rounded-md py-1 px-6 mb-4 mx-auto transition-colors duration-300 hover:bg-black hover:text-white"
     >
       Create a New Post
     </NuxtLink>

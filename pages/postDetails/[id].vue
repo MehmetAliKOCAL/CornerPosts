@@ -31,7 +31,7 @@ if (postsStore.messageToShow != "") {
     <div class="flex justify-center items-center mt-6">
       <NuxtLink
         to="/"
-        class="py-2 px-10 text-sky-500 border-2 border-sky-500 rounded-md hover:text-white hover:bg-sky-500 transition-colors duration-300"
+        class="py-2 px-10 text-sky-500 border-2 font-medium border-sky-500 rounded-md hover:text-white hover:bg-sky-500 transition-colors duration-300"
         >See All Posts</NuxtLink
       >
     </div>
